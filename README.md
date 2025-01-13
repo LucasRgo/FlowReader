@@ -1,5 +1,5 @@
 # FlowReader
-#### Video Demo: < URL OF THE VIDEO HERE >
+#### Video Demo: < https://youtu.be/PSks1SQWFGM >
 ## An interactive word-by-word reader that lets you upload books and read faster, keeping you engaged and reducing distractions.
 
 ## Distinctiveness and Complexity:
