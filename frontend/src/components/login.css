@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.gradient-background {
+    background: linear-gradient(135deg, #ff4500, #ffb400);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+.toggle-block {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#button-primary {
+    background: transparent;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(45deg, orange, red, yellow);
+    color: #ff4500;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+#button-primary:hover {
+  background: linear-gradient(45deg, orange, red, yellow);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 99, 71, 0.5);
+}
+
+
+.input-field {
+    width: 100%;
+    margin: 8px 0;
+}
+
+@keyframes slideFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+}
+
+.form-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    width: 35rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-transition-enter {
+    animation: slideFadeIn 0.5s ease forwards;
+}
+
+.form-transition-exit {
+    animation: slideFadeOut 0.5s ease forwards;
+}

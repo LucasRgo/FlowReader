@@ -1,0 +1,78 @@
+/* Footer container */
+#footer {
+    background-color: #222;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    padding: 40px 0;
+}
+
+/* Footer text and link styles */
+.footer h1, .footer h4 {
+    font-weight: bold;
+    color: #fff;
+}
+
+.footer-copyright {
+    color: #bbb;
+    font-size: 14px;
+}
+
+.footer-link {
+    color: #FF5722; /* Red-orange */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Change link color and add an underline effect on hover */
+.footer-link:hover {
+    color: #FF3D00; /* Darker red-orange on hover */
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+/* Footer section titles */
+.footer-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Footer list style */
+.footer-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-list-item {
+    margin-bottom: 15px;
+}
+
+.footer-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Social media icons and links */
+#footer-social-media .footer-list-item i {
+    color: #FF5722;
+    transition: color 0.3s ease;
+}
+
+#footer-social-media .footer-list-item i:hover {
+    color: #FF3D00;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .footer-title {
+        font-size: 16px;
+    }
+
+    .footer-list-item {
+        text-align: center;
+    }
+}
+
+.red-orange {
+    color: #FF5722; /* Red-orange color */
+}

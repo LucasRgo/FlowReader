@@ -1,0 +1,98 @@
+
+.pdfViewerContainer {
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.pdfViewerContainer:hover {
+    border-color: orangered;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.1);
+}
+
+.pdfNavigationControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.pdfNavigationButton {
+    background: transparent;
+    border: 1.5px solid transparent;
+    background-image: linear-gradient(white, white),
+    linear-gradient(45deg, orange, red, yellow);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 0.5rem 1rem;
+    color: orangered;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+.pdfNavigationButton:hover {
+    background-image: linear-gradient(45deg, orange, red, yellow);
+    background-clip: border-box;
+    color: white;
+}
+
+.pdfNavigationButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pdfNavigationButton:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.pdfPageInfo {
+    color: #222;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.pdfCanvasContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pdfCanvas {
+    max-width: 100%;
+    max-height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .pdfViewerContainer {
+        padding: 0.5rem;
+        height: 75vh;
+    }
+
+    .pdfNavigationControls {
+        gap: 0.5rem;
+    }
+
+    .pdfNavigationButton {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .pdfPageInfo {
+        font-size: 0.9rem;
+    }
+}

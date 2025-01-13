@@ -1,0 +1,198 @@
+.pdfContainer {
+    border: 2px dashed #FF5722;
+    border-radius: 8px;
+    padding: 2rem;
+    height: 85vh;
+    text-align: center;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdfContainer:hover {
+    border-color: orangered;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.1);
+}
+
+.dragActive {
+    background-color: rgba(255, 87, 34, 0.5);
+    border-style: solid;
+}
+
+.uploadText {
+    color: #222;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.fileInput {
+    display: none;
+}
+
+.uploadButton {
+    background: transparent;
+    border: 1.5px solid transparent;
+    background-image: linear-gradient(white, white),
+    linear-gradient(45deg, orange, red, yellow);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 0.75rem 1.5rem;
+    color: orangered;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+.uploadButton:hover {
+    background-image: linear-gradient(45deg, orange, red, yellow);
+    background-clip: border-box;
+    color: white;
+}
+
+.uploadButton:active {
+    transform: scale(0.98);
+}
+
+.viewerContainer {
+    width: 100%;
+    height: 700px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .pdfContainer {
+        padding: 1rem;
+        min-height: 200px;
+    }
+
+    .uploadText {
+        font-size: 1rem;
+    }
+
+    .viewerContainer {
+        height: 500px;
+    }
+}
+
+
+.formContainer {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 12px;
+    position: relative;
+    box-shadow:
+      0 1px 3px rgba(255, 87, 34, 0.7),
+      0 1px 2px rgba(255, 87, 34, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
+}
+
+.formContainer:hover {
+  transform: translateY(-10px);
+  box-shadow:
+  0 2px 4px rgba(255, 87, 34, 1),
+  0 2px 4px rgba(255, 87, 34, 1);
+}
+
+.formContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, orange, #FF5722);
+    border-radius: 12px 12px 0 0;
+}
+
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formContainer label {
+    color: #222;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.formContainer input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #556A77;
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.formContainer input:focus {
+    border-color: #FF5722;
+    box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.1);
+}
+
+.formContainer input::placeholder {
+    color: #556A77;
+    font-weight: 700;
+}
+
+.formContainer button {
+    background: transparent;
+    border: 1.5px solid transparent;
+    background-image: linear-gradient(white, white),
+    linear-gradient(45deg, orange, red, yellow);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 0.75rem 1.5rem;
+    color: orangered;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    margin-top: 1rem;
+}
+
+.formContainer button:hover {
+    background-image: linear-gradient(45deg, orange, red, yellow);
+    background-clip: border-box;
+    color: white;
+}
+
+.formContainer button:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    .pdfContainer {
+            padding: 1rem;
+            min-height: 200px;
+    }
+
+    .formContainer {
+        padding: 1rem;
+    }
+
+    .formContainer label {
+        font-size: 1rem;
+    }
+
+    .formContainer input {
+            padding: 0.6rem 0.8rem;
+    }
+}

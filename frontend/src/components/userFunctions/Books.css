@@ -1,0 +1,119 @@
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.book-card {
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 100%;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+    border: 1px solid #FF5722;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.book-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 87, 34, 0.03);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.book-card:hover::before {
+    opacity: 0.1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.book-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.book-title {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.75rem;
+    font-weight: bold;
+}
+
+.delete-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: 1.5px solid transparent;
+    background-image: linear-gradient(white, white),
+    linear-gradient(45deg, orange, red, yellow);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: orangered;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-button:hover {
+    background-image: linear-gradient(45deg, orange, red, yellow);
+    background-clip: border-box;
+    color: white;
+}
+
+.delete-button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .book-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        padding: 0.5rem;
+    }
+
+    .book-image {
+        height: 250px;
+    }
+}
+
+
+.book-card.hide {
+    animation: hide 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+
+
+@keyframes hide {
+  0% {
+    max-width: 100%;
+    opacity: 1;
+  }
+  100% {
+    max-width: 0;
+    opacity: 0;
+  }
+}
+
